@@ -6,19 +6,12 @@ const Hello = ({message, name}) => {
       </div>
     );
   };
-
   
-  export default Hello
+import PropTypes from 'prop-types';
   
-  import PropType from 'prop-types';
-  
-  Hello.PropType = {
-    message: PropType.string.isRequired,
-    name: PropType.string.isRequired,
-  }
-  Hello.defaultProp = {
-    name: "User",
-    message: "How are you?"
+  Hello.propTypes = {
+    message: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
   };
 
-  
+export default Hello;  
